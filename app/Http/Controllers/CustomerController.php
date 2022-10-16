@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Supplier;
 use Illuminate\Http\Request;
-use Intervention\Image\Facades\Image;
 
-class SupplierController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $suppliers = Supplier::where('status', 1)->get();
-        $page_title = 'Suppliers Info';
-        return view('supplier.index', compact('suppliers', 'page_title'));
+        $customers = Supplier::where('status', 2)->get();
+        $page_title = 'Customers Info';
+        return view('customer.index', compact('customers', 'page_title'));
     }
 
     /**
@@ -27,7 +26,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view('supplier.create');
+        return view('customer.create');
     }
 
     /**
@@ -91,7 +90,7 @@ class SupplierController extends Controller
     public function edit($id)
     {
         $supplier = Supplier::findOrFail($id);
-        return view('supplier.edit', compact('supplier'));
+        return view('customer.edit', compact('supplier'));
     }
 
     /**
