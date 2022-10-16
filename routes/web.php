@@ -18,6 +18,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::middleware(['auth'])->group(function (){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('home.test');
+//Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('home.test');
