@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::middleware(['auth'])->group(function (){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('/suppliers', App\Http\Controllers\SupplierController::class,['names' => 'supplier']);
 });
 
 //Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('home.test');
