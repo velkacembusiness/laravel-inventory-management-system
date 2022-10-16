@@ -25,13 +25,13 @@
                     <li class="{{ request()->routeIs('customer.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('customer.index') }}">All Customers</a></li>
                 </ul>
             </li>
-{{--            <li class="dropdown {{ request()->is('category/*') || request()->is('category') ? 'active':'' }}">--}}
-{{--                <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i><span>Category</span></a>--}}
-{{--                <ul class="dropdown-menu">--}}
-{{--                    <li class="{{ request()->routeIs('category.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('category.create') }}">Add Category</a></li>--}}
-{{--                    <li class="{{ request()->routeIs('category.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('category.index') }}">All Category</a></li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
+            <li class="dropdown {{ request()->is('category/*') || request()->is('category') ? 'active':'' }}">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i><span>Category</span></a>
+                <ul class="dropdown-menu">
+                    <li class="{{ request()->routeIs('category.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('category.create') }}">Add Category</a></li>
+                    <li class="{{ request()->routeIs('category.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('category.index') }}">All Category</a></li>
+                </ul>
+            </li>
 {{--            <li class="dropdown {{ request()->is('product/*') || request()->is('product') ? 'active':'' }}">--}}
 {{--                <a href="#" class="nav-link has-dropdown"><i class="fas fa-shopping-cart"></i><span>Product</span></a>--}}
 {{--                <ul class="dropdown-menu">--}}
