@@ -23,6 +23,7 @@ Route::middleware(['auth'])->group(function (){
     Route::resource('/suppliers', App\Http\Controllers\SupplierController::class,['names' => 'supplier']);
     Route::resource('/customers', App\Http\Controllers\CustomerController::class,['names' => 'customer']);
     Route::resource('/category', App\Http\Controllers\CategoryController::class,['names' => 'category']);
+    Route::resource('/product', App\Http\Controllers\ProductController::class,['names' => 'product']);
 });
 
 //Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('home.test');
