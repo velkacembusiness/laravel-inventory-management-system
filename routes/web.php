@@ -24,6 +24,7 @@ Route::middleware(['auth'])->group(function (){
     Route::resource('/customers', App\Http\Controllers\CustomerController::class,['names' => 'customer']);
     Route::resource('/category', App\Http\Controllers\CategoryController::class,['names' => 'category']);
     Route::resource('/product', App\Http\Controllers\ProductController::class,['names' => 'product']);
+    Route::resource('/unit', App\Http\Controllers\UnitController::class,['names' => 'unit']);
 });
 
 //Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('home.test');

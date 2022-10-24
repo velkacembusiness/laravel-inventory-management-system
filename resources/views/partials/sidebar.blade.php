@@ -39,13 +39,13 @@
                     <li class="{{ request()->routeIs('product.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('product.index') }}">All Product</a></li>
                 </ul>
             </li>
-{{--            <li class="dropdown {{ request()->is('unit/*') || request()->is('unit') ? 'active':'' }}">--}}
-{{--                <a href="#" class="nav-link has-dropdown"><i class="fas fa-shopping-cart"></i><span>Unit</span></a>--}}
-{{--                <ul class="dropdown-menu">--}}
-{{--                    <li class="{{ request()->routeIs('unit.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('unit.create') }}">Add Unit</a></li>--}}
-{{--                    <li class="{{ request()->routeIs('unit.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('unit.index') }}">All Unit</a></li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
+            <li class="dropdown {{ request()->is('unit/*') || request()->is('unit') ? 'active':'' }}">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-shopping-cart"></i><span>Unit</span></a>
+                <ul class="dropdown-menu">
+                    <li class="{{ request()->routeIs('unit.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('unit.create') }}">Add Unit</a></li>
+                    <li class="{{ request()->routeIs('unit.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('unit.index') }}">All Unit</a></li>
+                </ul>
+            </li>
 {{--            <li class="dropdown {{ request()->is('purchase/*') || request()->is('purchase') ? 'active':'' }}">--}}
 {{--                <a href="#" class="nav-link has-dropdown"><i class="fas fa-shopping-cart"></i><span>Purchase</span></a>--}}
 {{--                <ul class="dropdown-menu">--}}
